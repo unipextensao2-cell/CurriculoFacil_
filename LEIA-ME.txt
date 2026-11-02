@@ -1,0 +1,19 @@
+CURRÍCULO FÁCIL — PACOTE PWA
+
+CONTEÚDO
+- index.html: código original, com apenas metadados PWA e registro do Service Worker acrescentados.
+- manifest.json, service-worker.js e icons/: instalação e cache básico do aplicativo.
+- QR_Curriculo_Facil.png: QR Code para https://unipextensao2-cell.github.io/CurriculoFacil_/
+
+PUBLICAÇÃO
+Extraia o conteúdo da pasta CurriculoFacil_PWA e envie todos os arquivos e a pasta icons para a raiz do repositório GitHub Pages CurriculoFacil_. Os caminhos são relativos (./), portanto funcionam no caminho /CurriculoFacil_/.
+
+INSTALAÇÃO
+Android: abra o endereço publicado no Chrome e use “Instalar app” ou “Adicionar à tela inicial”, quando oferecido.
+iPhone/iPad: abra o endereço no Safari, toque em Compartilhar e escolha “Adicionar à Tela de Início”. O iOS não instala automaticamente; a abertura independente depende do suporte do sistema.
+
+CACHE E ATUALIZAÇÃO
+O Service Worker mantém a página e os arquivos locais essenciais para uma abertura básica sem rede. Ao publicar uma versão nova, altere CACHE_NAME em service-worker.js (por exemplo, v1 para v2); o navegador instala o novo cache e elimina o anterior. A atualização do Service Worker é verificada pelo navegador em visitas subsequentes.
+
+LIMITAÇÃO OFFLINE
+A página usa fontes do Google Fonts e a biblioteca html2pdf.js hospedada no cdnjs, mantidas sem alterações no código original. Esses recursos externos dependem de internet e podem não estar disponíveis offline; a geração de PDF pode exigir conexão. O armazenamento local e as demais funções do projeto permanecem sob o código original.
